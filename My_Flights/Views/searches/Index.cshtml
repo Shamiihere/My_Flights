@@ -1,0 +1,53 @@
+﻿@model My_Flights.Models.SearchViewModel
+
+@using (Html.BeginForm("SearchResults", "Searches", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.SearchQuery)
+        @Html.TextBoxFor(model => model.SearchQuery)
+        <button type="submit">Search</button>
+    </div>
+}
+
+@if (Model.SearchResults != null && Model.SearchResults.Any())
+{
+    <table>
+        <tr>
+            <th>Booking ID</th>
+            <th>Booking Date</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Flight Number</th>
+            <th>Departure Airport</th>
+            <th>Arrival Airport</th>
+            <th>Departure Date</th>
+            <th>Arrival Date</th>
+            <th>Airline</th>
+            <th>Price</th>
+            <th>Seat Number</th>
+            <th>Availability</th>
+        </tr>
+        @foreach (var item in Model.SearchResults)
+        {
+            <tr>
+                <td>@item.BookingID</td>
+                <td>@item.BookingDate</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.FlightNumber</td>
+                <td>@item.DepartureAirport</td>
+                <td>@item.ArrivalAirport</td>
+                <td>@item.DepartureDate</td>
+                <td>@item.ArrivalDate</td>
+                <td>@item.Airline</td>
+                <td>@item.Price</td>
+                <td>@item.SeatNumber</td>
+                <td>@item.Availability</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No results found.</p>
+}

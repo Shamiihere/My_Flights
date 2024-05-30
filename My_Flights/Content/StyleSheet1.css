@@ -1,0 +1,23 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('../image/new2.png');
+    
+    /* background-image: url('../image/premium_photo-1679954420929-72dc48e5176c.jpeg');*/
+    backface-visibility: visible;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center center;
+}
+
+
+.btn {
+
+    background-color: green;
+    color: white;
+}

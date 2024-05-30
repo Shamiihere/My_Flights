@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e8d2dc211b9c45659d297fac517663bc" Name="Diagram1">
+        <EntityTypeShape EntityType="FlightModel.Booking" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightModel.Flight" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlightModel.Seat" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="FlightModel.FK__Booking__FlightI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="FlightModel.FK__Seat__FlightID__403A8C7D" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FlightModel.Passenger" Width="1.5" PointX="5.375" PointY="1" />
+        <AssociationConnector Association="FlightModel.FK__Booking__Passeng__3B75D760" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
